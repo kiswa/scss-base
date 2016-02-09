@@ -10,15 +10,22 @@ You can see a demo page with all the styles provided by `scss-base` at https://k
 
 Simply run `npm install scss-base --save-dev` to include `scss-base` in your project and save it in your `package.json`.
 
-Import `scss-base` in your SCSS to use the provided styles. If you use [Gulp](http://gulpjs.com/) and [`gulp-ruby-sass`](https://www.npmjs.com/package/gulp-ruby-sass), your SCSS task would look something like this:
+Import `scss-base` in your SCSS to use the provided styles.
+
+```scss
+@import 'scss-base';
+```
+
+If you use [Gulp](http://gulpjs.com/) and [`gulp-ruby-sass`](https://www.npmjs.com/package/gulp-ruby-sass), your SCSS task would look something like this:
 
 ```javascript
-var sass = require('gulp-ruby-sass');
+var sass = require('gulp-ruby-sass'),
+    scss_base = 'node_modules/scss-base/src';
 
 gulp.task('scss', function() {
     return sass('/path/to/your/main.scss', {
             precision: 10,
-            loadPath: [ 'node_modules/scss-base/src/main.scss' ]
+            loadPath: [ scss_base ]
         })
         //.pipe(do other stuff - concat, minify, etc.)
         .pipe(gulp.dest('/path/to/ouput/css/'));

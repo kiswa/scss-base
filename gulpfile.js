@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     paths = {
         html: src + '**/*.html',
         scss: src + '**/*.scss',
-        scssMain: src + 'main.scss',
+        scssMain: src + 'scss-base.scss',
         normalize: 'node_modules/normalize.css/'
     };
 
