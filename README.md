@@ -1,6 +1,8 @@
 # scss-base
 
-`scss-base` is a selection of styles that provide a clean default look for SCSS projects. The fonts used are [Droid Sans](https://www.google.com/fonts/specimen/Droid+Sans) and [Droid Sans Mono](https://www.google.com/fonts/specimen/Droid+Sans+Mono). This also uses [Normalize.css](http://necolas.github.io/normalize.css/) as a base style 'reset'.
+`scss-base` is a selection of styles that provide a clean default look for SCSS projects. The fonts used are [Droid Sans](https://www.google.com/fonts/specimen/Droid+Sans) and [Droid Sans Mono](https://www.google.com/fonts/specimen/Droid+Sans+Mono).
+
+This also uses [Normalize.css](http://necolas.github.io/normalize.css/) as a base style 'reset'. Since that is a straight CSS file, it cannot be automatically included in SCSS, so it is recommended you also use Normalize.css in your project (though the styles work well without it).
 
 ## Demo
 
