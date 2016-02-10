@@ -5,6 +5,7 @@ button,
 .btn {
     background-color: $color-primary;
     border: 1px solid darken($color-primary, 15%);
+    color: $color-text-button;
     display: inline-block;
     line-height: 1em;
     padding: 10px;
