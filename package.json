@@ -12,16 +12,14 @@
   ],
   "author": "Matthew Ross <root@matthewross.me> (https://matthewross.me)",
   "license": "MIT",
-  "dependencies": {
-    "normalize.css": "latest"
-  },
   "devDependencies": {
     "del": "^2.2.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
-    "gulp-ruby-sass": "^2.0.6",
-    "gulp-scss-lint": "^0.3.9"
+    "gulp-sass": "^2.2.0",
+    "gulp-scss-lint": "^0.3.9",
+    "node.normalize.scss": "^3.0.3"
   },
   "repository": {
     "type": "git",

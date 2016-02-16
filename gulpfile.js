@@ -3,7 +3,7 @@ var gulp = require('gulp'),
 
     concat = require('gulp-concat'),
     scssLint = require('gulp-scss-lint'),
-    sass = require('gulp-ruby-sass'),
+    sass = require('gulp-sass'),
     cssPrefixer = require('gulp-autoprefixer'),
 
     src = 'src/',
@@ -12,7 +12,7 @@ var gulp = require('gulp'),
         html: src + '**/*.html',
         scss: src + '**/*.scss',
         scssMain: src + 'scss-base.scss',
-        normalize: 'node_modules/normalize.css/'
+        normalize: 'node_modules/node.normalize.scss'
     };
 
 gulp.task('clean', function() {
@@ -25,17 +25,15 @@ gulp.task('lintScss', function() {
 });
 
 gulp.task('scss', function() {
-    return sass(paths.scssMain, { precision: 10 })
+    return gulp.src(paths.scssMain)
+        .pipe(sass({
+                precision: 10,
+                includePaths: paths.normalize
+            }).on('error', sass.logError))
         .pipe(cssPrefixer())
         .pipe(concat('scss-base.css'))
         .pipe(gulp.dest(dist + 'css/'));
 });
-
-gulp.task('normalize', ['scss'], function() {
-    return gulp.src([ 'node_modules/normalize.css/normalize.css', dist + 'css/scss-base.css' ])
-        .pipe(concat('scss-base.css'))
-        .pipe(gulp.dest(dist + 'css/'));
-})
 
 gulp.task('html', function() {
     return gulp.src(paths.html)
@@ -54,4 +52,4 @@ gulp.task('watch', function() {
     watchHtml.on('change', onChanged);
 });
 
-gulp.task('default', [ 'lintScss', 'scss', 'html', 'normalize' ]);
+gulp.task('default', [ 'lintScss', 'scss', 'html' ]);
