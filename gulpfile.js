@@ -12,7 +12,7 @@ var gulp = require('gulp'),
         html: src + '**/*.html',
         scss: src + '**/*.scss',
         scssMain: src + 'scss-base.scss',
-        normalize: 'node_modules/node.normalize.scss'
+        normalize: 'node_modules/node-normalize-scss'
     };
 
 gulp.task('clean', function() {

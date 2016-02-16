@@ -19,7 +19,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-sass": "^2.2.0",
     "gulp-scss-lint": "^0.3.9",
-    "node.normalize.scss": "^3.0.3"
+    "node-normalize-scss": "^1.1.1"
   },
   "repository": {
     "type": "git",

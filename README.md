@@ -2,7 +2,7 @@
 
 `scss-base` is a selection of styles that provide a clean default look for SCSS projects. The fonts used are [Droid Sans](https://www.google.com/fonts/specimen/Droid+Sans) and [Droid Sans Mono](https://www.google.com/fonts/specimen/Droid+Sans+Mono).
 
-This also uses [Normalize.css](http://necolas.github.io/normalize.css/) as a base style 'reset' (via [node.normalize.scss](https://www.npmjs.com/package/node.normalize.scss)). Because of this, you will not need a separate style reset/normalizer. `scss-base` also includes the standard [`box-sizing: border-box;` reset](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
+This also uses [Normalize.css](http://necolas.github.io/normalize.css/) as a base style 'reset' (via [node-normalize-scss](https://www.npmjs.com/package/node-normalize-scss)). Because of this, you will not need a separate style reset/normalizer. `scss-base` also includes the standard [`box-sizing: border-box;` reset](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
 
 ## Demo
 
