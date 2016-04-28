@@ -21,6 +21,29 @@
                 content: '';
                 display: block;
             }
+            .shadow-low, .shadow-mid, .shadow-high, .shadow-float {
+                float: left;
+                margin-right: 30px;
+                padding: 1em;
+                width: 20%;
+            }
+            .shadow-low {
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14),
+                            0 1px 5px 0 rgba(0, 0, 0, .12),
+                            0 3px 1px -2px rgba(0, 0, 0, .2);
+            }
+            .shadow-mid {
+                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .15),
+                            0 2px 10px 0 rgba(0, 0, 0, .12);
+            }
+            .shadow-high {
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .15),
+                            0 4px 14px 0 rgba(0, 0, 0, .12);
+            }
+            .shadow-float {
+                box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .22),
+                            0 17px 20px 0 rgba(0, 0, 0, .12);
+            }
             nav {
                 background-color: #333;
                 color: #7fd4ff;
@@ -68,6 +91,7 @@
         <nav>
             <ul>
                 <li><a href="#intro">Intro</a></li>
+                <li><a href="#mixins">Mixins</a></li>
                 <li>Text
                     <ul>
                         <li><a href="#headers">Headers</a></li>
@@ -119,6 +143,17 @@
                     you will see it uses the primary color for the highlight.
                 </p>
                 <p>Each section is separated by an <code>&lt;hr&gt;</code> element to demonstrate their styling.</p>
+            </section>
+            <hr>
+
+            <section id="mixins" class="clearfix">
+                <h2>Mixins</h2>
+                <p>There is a <code>clearfix</code> mixin using the standard clearfix in case you need it.</p>
+                <p>Since I like using them, <code>scss-base</code> also includes some mixins for creating shadows. This is what they look like when used:</p>
+                <div class="shadow-low"><code>shadow-low</code></div>
+                <div class="shadow-mid"><code>shadow-mid</code></div>
+                <div class="shadow-high"><code>shadow-high</code></div>
+                <div class="shadow-float"><code>shadow-float</code></div>
             </section>
             <hr>
 
