@@ -18,6 +18,7 @@ input,
 button,
 textarea,
 select {
+    background-color: $white;
     border: 1px solid $color-border;
     border-radius: 3px;
     outline: 0;
