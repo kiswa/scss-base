@@ -6,6 +6,7 @@ button,
     background-color: $color-primary;
     border: 1px solid darken($color-primary, 15%);
     color: $color-text-button;
+    cursor: pointer;
     display: inline-block;
     line-height: 1em;
     padding: 10px;
@@ -23,6 +24,7 @@ button,
     &:disabled {
         background-color: lighten($color-primary, 10%);
         color: lighten($color-text, 10%);
+        cursor: default;
     }
 
     &:focus {
