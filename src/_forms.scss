@@ -21,6 +21,7 @@ select {
     background-color: $white;
     border: 1px solid $color-border;
     border-radius: 3px;
+    height: 2.2em;
     outline: 0;
     padding: 5px;
     width: 100%;
@@ -38,13 +39,8 @@ textarea {
     resize: vertical;
 }
 
-[type="search"] {
-    width: 98.8%;
-}
-
 [type="color"] {
-    background-color: $white;
-    padding: 0;
+    padding: 2px;
 }
 
 [type="range"] {
@@ -121,5 +117,6 @@ textarea {
 [type="button"],
 [type="submit"],
 button {
+    height: auto;
     width: auto;
 }
