@@ -41,7 +41,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('watch', function() {
-    var watchScss = gulp.watch(paths.scss, ['lintScss', 'normalize']),
+    var watchScss = gulp.watch(paths.scss, ['lintScss', 'scss']),
         watchHtml = gulp.watch(paths.html, ['html']),
 
         onChanged = function(event) {
