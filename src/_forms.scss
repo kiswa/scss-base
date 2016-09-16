@@ -118,6 +118,53 @@ textarea {
 [type="button"],
 [type="submit"],
 button {
+    cursor: pointer;
     height: auto;
     width: auto;
 }
+
+label {
+    cursor: pointer;
+}
+
+.toggle {
+    cursor: pointer;
+    position: relative;
+    vertical-align: text-top;
+
+    &::before {
+        background-color: $color-toggle-off;
+        border-radius: 3px;
+        content: ' ';
+        display: inline-block;
+        height: 8px;
+        padding: 5px 7px;
+        transition: background 300ms;
+        width: 23px;
+    }
+
+    &::after {
+        background-color: $white;
+        border: 1px solid $color-border;
+        border-radius: 2px;
+        content: ' ';
+        display: inline-block;
+        height: 20px;
+        left: 0;
+        position: absolute;
+        top: -5px;
+        transition: transform 150ms;
+        width: 15px;
+    }
+}
+
+.hidden:checked + .toggle {
+    &::before {
+        background-color: $color-toggle-on;
+    }
+
+    &::after {
+        transform: translate(23px);
+    }
+}
+

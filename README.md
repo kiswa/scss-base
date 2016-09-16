@@ -47,13 +47,17 @@ gulp.task('scss', function() {
 ```scss
 $color-background: #fefefe !default;
 $color-text: #333 !default;
-$color-mark: #f3f315 !default; /* Highlighter yellow */
+$color-text-button: #333 !default;
+$color-mark: #f3f315 !default;
 
 $color-border: #aaa !default;
 $color-table-row: lighten($color-text, 75%) !default;
 
-$color-primary: #7fd4ff !default; /* The blue in the demo */
-$color-secondary: #86deb7 !default; /* The green in the demo */
+$color-primary: #7fd4ff !default;
+$color-secondary: #86deb7 !default;
+
+$color-toggle-on: #86deb7 !default;
+$color-toggle-off: #da6869 !default;
 
 $font-url: 'https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono' !default;
 $font-name: 'Droid Sans' !default;

@@ -412,7 +412,7 @@ q w e r t y u i o p [ ] \</pre>
                 </p>
                 <p>
                     Note that inputs are styled to use borders and highlights for each state, and not use the browser's default
-                    input selection style.
+                    input selection style. Also, labels use a pointer cursor to indicate they can be clicked to select an input.
                 </p>
                 <form>
                     <fieldset id="inputs">
@@ -479,6 +479,24 @@ q w e r t y u i o p [ ] \</pre>
                                 <input type="radio" name="radios">
                                 Option 3
                             </label>
+                        </p>
+
+                        <p>
+                            <p>Toggle Switches<br>
+                                <small>(really just fancy checkboxes)</small></p>
+                            <label>WiFi <input type="checkbox" class="hidden" checked>
+                                <span class="toggle"></span>
+                            </label>
+                            &nbsp;&nbsp;After the label... <br>
+                            <label><input type="checkbox" class="hidden">
+                                <span class="toggle"></span> Bluetooth
+                            </label>
+                            &nbsp;&nbsp;... or before it.
+
+                            <p>Usage:</p>
+                            <pre><code>&lt;label>Your Text &lt;input type="checkbox" class="hidden">
+    &lt;span class="toggle>">&lt;/span>
+&lt;/label></code></pre>
                         </p>
                     </fieldset>
 
