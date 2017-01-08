@@ -14,7 +14,7 @@ You can see a demo page with all the styles provided by `scss-base` at https://k
 
 ## Usage
 
-Simply run `npm install scss-base --save-dev` to include `scss-base` in your project and save it in your `package.json`.
+Simply run `npm i scss-base node-normalize-scss -D` to include `scss-base` and its peer dependency in your project and save it in your `package.json`.
 
 Import `scss-base` in your SCSS to use the provided styles.
 
@@ -33,7 +33,10 @@ gulp.task('scss', function() {
     return gulp.src('/path/to/your/main.scss')
         .pipe(sass({
             precision: 10,
-            includePaths: [ scss_base ]
+            includePaths: [
+                scss_base,
+                require('node-normalize-scss').includePaths
+            ]
         })
         //.pipe(do other stuff - concat, minify, etc.)
         .pipe(gulp.dest('/path/to/ouput/css/'));
