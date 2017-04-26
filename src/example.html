@@ -64,6 +64,7 @@
                 position: fixed;
                 right: 0;
                 top: 0;
+                z-index: 1000;
             }
             nav ul {
                 background-color: #333;
@@ -361,7 +362,7 @@ q w e r t y u i o p [ ] \</pre>
                     <q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">The <code>&lt;q&gt;</code> element is for a short
                     inline quotation.</q> The <cite><code>&lt;cite&gt;</code> element</cite> is used for a citation
                     and <cite><a href="#other">can embed a link</a></cite>. To define something, <dfn>use the <code>&lt;dfn&gt;</code>
-                    element</dfn>. Visually, it ends up the same as <var>the <code>&lt;var&gt;</code>var element</var>.
+                    element</dfn>. Visually, it ends up the same as <var>the <code>&lt;var&gt;</code> element</var>.
                 </p>
                 <p>
                     If you want to highlight some text, just use <mark>the <code>&lt;mark&gt;</code> element for that</mark> as it has been styled
@@ -485,23 +486,100 @@ q w e r t y u i o p [ ] \</pre>
                             </label>
                         </p>
 
+                        <h4>Customized Checkbox/Radio Inputs</h4>
                         <p>
-                            <p>Toggle Switches<br>
-                                <small>(really just fancy checkboxes)</small></p>
-                            <label>WiFi <input type="checkbox" class="hidden" checked>
-                                <span class="toggle"></span>
-                            </label>
-                            &nbsp;&nbsp;After the label... <br>
-                            <label><input type="checkbox" class="hidden">
-                                <span class="toggle"></span> Bluetooth
-                            </label>
-                            &nbsp;&nbsp;... or before it.
-
-                            <p>Usage:</p>
-                            <pre><code>&lt;label>Your Text &lt;input type="checkbox" class="hidden">
-    &lt;span class="toggle>">&lt;/span>
-&lt;/label></code></pre>
+                            The radio buttons and checkboxes use the primary and accent colors.
+                            The toggle colors are defined separately.
                         </p>
+
+                        <p>Toggle Switches <small>(really just fancy checkboxes)</small></p>
+
+                        <label>WiFi <input type="checkbox" class="hidden" checked>
+                            <span class="toggle"></span>
+                        </label>
+                        &nbsp;&nbsp;After the label... <br>
+
+                        <label><input type="checkbox" class="hidden">
+                            <span class="toggle"></span> Bluetooth
+                        </label>
+                        &nbsp;&nbsp;... or before it.
+
+                        <p>Usage:</p>
+                        <pre><code>&lt;label>
+    Your Text Here
+    &lt;input type="checkbox" class="hidden">
+    &lt;span class="toggle">&lt;/span>
+    And/Or Text Here
+&lt;/label></code></pre>
+
+                        <p>Checkboxes</p>
+
+                        <label>
+                            <input class="custom" type="checkbox" checked>
+                            <span class="custom-target"></span>
+                            Choice A
+                        </label>
+
+                        <label>
+                            <input class="custom" type="checkbox">
+                            <span class="custom-target"></span>
+                            Choice B
+                        </label>
+
+                        <label>
+                            <input class="custom" type="checkbox" disabled>
+                            <span class="custom-target"></span>
+                            Choice C
+                        </label>
+
+                        <label>
+                            <input class="custom" type="checkbox" checked disabled>
+                            <span class="custom-target"></span>
+                            Choice D
+                        </label>
+
+                        <p>Usage:</p>
+                        <pre><code>&lt;label>
+    Your Text Here
+    &lt;input type="checkbox" class="custom">
+    &lt;span class="custom-target">&lt;/span>
+    And/Or Text Here
+&lt;/label></code></pre>
+
+                        <p>Radio Buttons</p>
+
+                        <label>
+                            <input type="radio" name="radiocustom1" class="custom" checked>
+                            <span class="custom-target"></span>
+                            Option 1
+                        </label>
+
+                        <label>
+                            <input type="radio" name="radiocustom1" class="custom">
+                            <span class="custom-target"></span>
+                            Option 2
+                        </label>
+
+                        <label>
+                            <input type="radio" name="radiocustom2" class="custom" checked disabled>
+                            <span class="custom-target"></span>
+                            Option 1
+                        </label>
+
+                        <label>
+                            <input type="radio" name="radiocustom2" class="custom" disabled>
+                            <span class="custom-target"></span>
+                            Option 2
+                        </label>
+
+                        <p>Usage:</p>
+                        <pre><code>&lt;label>
+    Your Text Here
+    &lt;input type="radio" class="custom">
+    &lt;span class="custom-target">&lt;/span>
+    And/Or Text Here
+&lt;/label></code></pre>
+
                     </fieldset>
 
                     <fieldset id="textareas">

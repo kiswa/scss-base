@@ -8,6 +8,8 @@
 
 This also uses [Normalize.css](http://necolas.github.io/normalize.css/) as a base style 'reset' (via [node-normalize-scss](https://www.npmjs.com/package/node-normalize-scss)). Because of this, you will not need a separate style reset/normalizer. `scss-base` also includes the standard [`box-sizing: border-box;` reset](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
 
+Even with that, `scss-base` is less than 3KB zipped (~10KB minified).
+
 ## Demo
 
 You can see a demo page with all the styles provided by `scss-base` at https://kiswa.github.io/scss-base
@@ -58,6 +60,8 @@ $color-secondary: #86deb7 !default;
 
 $color-toggle-on: #86deb7 !default;
 $color-toggle-off: #da6869 !default;
+
+$color-disabled: #aaa !default;
 
 $font-url: 'https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono' !default;
 $font-name: 'Droid Sans' !default;
