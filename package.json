@@ -13,7 +13,7 @@
   "author": "Matthew Ross <root@matthewross.me> (https://matthewross.me)",
   "license": "MIT",
   "peerDependencies": {
-    "node-normalize-scss": "^1.4.0"
+    "node-normalize-scss": "^2.0.0"
   },
   "devDependencies": {
     "del": "^2.2.2",
