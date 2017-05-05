@@ -1,6 +1,6 @@
 {
   "name": "scss-base",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "A collection of SCSS styles and mixins to provide a clean base.",
   "main": "main.scss",
   "keywords": [
