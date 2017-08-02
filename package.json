@@ -16,12 +16,12 @@
     "node-normalize-scss": "^3.0.0"
   },
   "devDependencies": {
-    "del": "^2.2.2",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^3.1.0",
-    "gulp-scss-lint": "^0.4.0"
+    "gulp-scss-lint": "^0.5.0"
   },
   "repository": {
     "type": "git",
@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/kiswa/scss-base/issues"
   },
-  "homepage": "https://github.com/kiswa/scss-base#readme"
+  "homepage": "https://github.com/kiswa/scss-base#readme",
+  "dependencies": {
+    "node-normalize-scss": "^3.0.0"
+  }
 }
