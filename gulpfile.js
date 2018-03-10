@@ -11,8 +11,7 @@ var gulp = require('gulp'),
     paths = {
         html: src + '**/*.html',
         scss: src + '**/*.scss',
-        scssMain: src + 'scss-base.scss',
-        normalize: require('node-normalize-scss').includePaths
+        scssMain: src + 'scss-base.scss'
     };
 
 gulp.task('clean', function() {
@@ -26,10 +25,7 @@ gulp.task('lintScss', function() {
 
 gulp.task('scss', function() {
     return gulp.src(paths.scssMain)
-        .pipe(sass({
-                precision: 10,
-                includePaths: paths.normalize
-            }).on('error', sass.logError))
+        .pipe(sass({ precision: 10 }).on('error', sass.logError))
         .pipe(cssPrefixer())
         .pipe(concat('scss-base.css'))
         .pipe(gulp.dest(dist + 'css/'));

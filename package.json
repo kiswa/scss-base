@@ -12,16 +12,13 @@
   ],
   "author": "Matthew Ross <root@matthewross.me> (https://matthewross.me)",
   "license": "MIT",
-  "peerDependencies": {
-    "node-normalize-scss": "^3.0.0"
-  },
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^3.1.0",
-    "gulp-scss-lint": "^0.5.0"
+    "gulp-scss-lint": "^0.6.1"
   },
   "repository": {
     "type": "git",
@@ -30,8 +27,5 @@
   "bugs": {
     "url": "https://github.com/kiswa/scss-base/issues"
   },
-  "homepage": "https://github.com/kiswa/scss-base#readme",
-  "dependencies": {
-    "node-normalize-scss": "^3.0.0"
-  }
+  "homepage": "https://github.com/kiswa/scss-base#readme"
 }
