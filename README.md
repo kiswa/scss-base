@@ -16,7 +16,7 @@ You can see a demo page with all the styles provided by `scss-base` at https://k
 
 ## Usage
 
-Simply run `npm i scss-base node-normalize-scss -D` to include `scss-base` and its peer dependency in your project and save it in your `package.json`.
+Simply run `npm i scss-base -D` to include `scss-base` in your project and save it in your `package.json`.
 
 Import `scss-base` in your SCSS to use the provided styles.
 

@@ -1,6 +1,6 @@
 {
   "name": "scss-base",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "A collection of SCSS styles and mixins to provide a clean base.",
   "main": "main.scss",
   "keywords": [
@@ -19,7 +19,8 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.1.0",
-    "gulp-scss-lint": "^1.0.0"
+    "gulp-scss-lint": "^1.0.0",
+    "normalize.css": "^8.0.1"
   },
   "repository": {
     "type": "git",
@@ -28,8 +29,5 @@
   "bugs": {
     "url": "https://github.com/kiswa/scss-base/issues"
   },
-  "homepage": "https://github.com/kiswa/scss-base#readme",
-  "dependencies": {
-    "normalize.css": "^8.0.1"
-  }
+  "homepage": "https://github.com/kiswa/scss-base#readme"
 }
