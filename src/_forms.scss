@@ -21,6 +21,7 @@ select {
     background-color: $white;
     border: 1px solid $color-border;
     border-radius: 3px;
+    font-family: $font-name;
     height: 2.2em;
     outline: 0;
     padding: 5px;
@@ -212,12 +213,13 @@ label {
 
 [type="radio"].custom {
     + .custom-target {
-        border-radius: 100%;
+        border-radius: 50%;
         height: 1.1em;
         width: 1.1em;
     }
 
     + .custom-target::after {
         content: '●';
+        padding-left: 2px;
     }
 }

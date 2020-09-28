@@ -8,8 +8,11 @@ button,
     color: $color-text-button;
     cursor: pointer;
     display: inline-block;
+    font-family: $font-name;
+    font-size: 1rem;
     line-height: .9em;
     padding: 10px;
+    transition: all .25s;
 
     &:hover {
         background-color: darken($color-primary, 10%);

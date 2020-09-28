@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     scssLint = require('gulp-scss-lint'),
     sass = require('gulp-sass'),
     cssPrefixer = require('gulp-autoprefixer'),
+    cleanCss = require('gulp-clean-css'),
 
     src = 'src/',
     dist = 'dist/',
@@ -28,6 +29,7 @@ gulp.task('scss', function() {
         .pipe(sass({ precision: 10 }).on('error', sass.logError))
         .pipe(cssPrefixer())
         .pipe(concat('scss-base.css'))
+        .pipe(cleanCss({ inline: false }))
         .pipe(gulp.dest(dist + 'css/'));
 });
 
@@ -37,15 +39,15 @@ gulp.task('html', function() {
 });
 
 gulp.task('watch', function() {
-    var watchScss = gulp.watch(paths.scss, ['lintScss', 'scss']),
-        watchHtml = gulp.watch(paths.html, ['html']),
+    var watchScss = gulp.watch(paths.scss, gulp.series('lintScss', 'scss')),
+        watchHtml = gulp.watch(paths.html, gulp.series('html')),
 
         onChanged = function(event) {
-            console.log('File ' + event.path + ' was ' + event.type + '. Running tasks...');
+            console.log('File ' + event + ' was changed. Running tasks...');
         };
 
     watchScss.on('change', onChanged);
     watchHtml.on('change', onChanged);
 });
 
-gulp.task('default', [ 'lintScss', 'scss', 'html' ]);
+gulp.task('default', gulp.series('lintScss', 'scss', 'html'));
